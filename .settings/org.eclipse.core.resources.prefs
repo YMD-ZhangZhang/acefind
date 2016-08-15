@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding//src/acefind/__init__.py=utf-8
+encoding//src/acefind/file_collector/file_collector.py=utf-8
 encoding//src/acefind/rule/item/rule_item.py=utf-8
 encoding//src/acefind/rule/set/rule_set.py=utf-8
 encoding//src/acefind_exe/boot/boot.py=utf-8

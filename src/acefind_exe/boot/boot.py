@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import division, print_function, absolute_import
 import sys
+
+from acefind.file_collector.file_collector import FileCollector
 import acefind
 
 SYS_ENC = sys.getfilesystemencoding()
@@ -22,7 +24,18 @@ class Boot(object):
 		# 否则使用默认固定参数，方便测试
 		if len(sys.argv) > 1:
 			argv = sys.argv[1:]
-		
+			
 		print(acefind.__name__, acefind.__version__)
 		print(argv)
-	
+		
+		# FOR DEBUG
+		result_list = []
+		search_path = sys.path[0]
+		
+		FileCollector(result_list).collect(search_path)
+		
+		print('\nSearch path: ' + search_path)
+		print('The following is the result of the collection:')
+		
+		for each_file in result_list:
+			print(each_file)
